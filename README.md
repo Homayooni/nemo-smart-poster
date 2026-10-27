@@ -1,5 +1,3 @@
-# nemo-smart-poster
-Markdown
 # Nemo Auto Folder Cover & Cleaner (Smart Poster Downloader) 📁🎨🎥
 
 [English](#english) | [فارسی](#persian)
@@ -9,55 +7,68 @@ Markdown
 <a name="english"></a>
 ## 🌐 English Description
 
-A smart and automated extension for the **Nemo File Manager** (Linux Mint) that allows you to easily clean up folder names and set movie or anime posters with a single right-click:
+A smart, automated extension for the **Nemo File Manager** (Linux Mint) that helps you organize your media library. With a single right-click, it cleans up folder/file names and assigns official posters for movies, TV shows, and anime.
 
-1. **Clean Folder Names:** Automatically replaces dots (`.`) and underscores (`_`) with spaces and strips out quality tags (e.g., 1080p, BluRay, x264, WEB-DL).
-2. **Smart Poster Search (Priority 1):** Automatically fetches official anime posters from **MyAnimeList (Jikan API)** and movie/TV show posters directly from **IMDb**.
-3. **Local Cover Backup (Priority 2):** Uses an existing image in the folder if offline or if no online poster is found.
-4. **Video Frame Extraction (Priority 3):** Automatically extracts a video frame using `ffmpeg` if no cover image is available.
+### 🔄 How It Works
+1. **Clean Names:** Automatically converts dots (`.`) and underscores (`_`) into spaces, removing quality tags (e.g., `1080p`, `BluRay`, `x264`, `WEB-DL`, `YIFY`).
+2. **Online Poster Fetching (Priority 1):** 
+   - **Anime:** Searches **MyAnimeList** (via Jikan API).
+   - **Movies & TV Shows:** Searches **IMDb** directly.
+3. **Local Cover Backup (Priority 2):** Uses an existing image in the folder if offline or if no poster was found online.
+4. **Video Frame Extraction (Priority 3):** Extracts a clear frame from `.mkv`, `.mp4`, or other video files using `ffmpeg` when no image is present.
 
 ### 🌟 Features
-- **Dual-Source Poster Fetcher:** Uses **MyAnimeList** for anime titles and **IMDb** for mainstream movies & TV shows.
-- **Offline Fallback:** Automatically extracts a thumbnail from `.mkv`, `.mp4`, or other video formats when offline.
-- **Auto-Cleaning Engine:** Intelligently ignores noise keywords (resolutions, codecs, release group names) during search.
-- **Folder Metadata Manager:** Writes proper `.directory` entries and updates GIO metadata instantly.
+- **Dual Online Sources:** Reliable metadata from **MyAnimeList** & **IMDb**.
+- **Auto Video Folder Creation:** Right-clicking an isolated video file cleans its name, moves it into a newly created folder, and sets the folder poster.
+- **Noise Filter Engine:** Cleans unnecessary release tags before querying search engines for accurate results.
+- **Fast & Lightweight:** No API keys required.
 
 ### 📋 Prerequisites
-To run the script, make sure the required packages are installed:
+Make sure you have the required dependencies installed:
 ```bash
 sudo apt update && sudo apt install ffmpeg curl python3 -y
-🚀 Quick Installation
-Run the following one-liner command in your terminal (replace YOUR_USERNAME with your GitHub username):
+```
 
-Bash
-curl -sSL [https://raw.githubusercontent.com/YOUR_USERNAME/nemo-smart-poster/main/install.sh](https://raw.githubusercontent.com/YOUR_USERNAME/nemo-smart-poster/main/install.sh) | bash
-🇮🇷 توضیحات فارسی
-یک ابزار هوشمند و خودکار برای فایل‌منیجر Nemo (لینوکس مینت) که با یک راست‌کلیک:
+### 🚀 Quick Installation
+Run this single command in your terminal to install or update:
+```bash
+curl -sSL https://raw.githubusercontent.com/Homayooni/nemo-smart-poster/main/install.sh | bash
+```
 
-اصلاح نام پوشه‌ها: نام پوشه‌ها را استاندارد و تمیز می‌کند (حذف نقطه‌ها، آندرلاین‌ها و عبارت‌های اضافی کیفیت).
+---
 
-دانلود هوشمند پوستر (اولویت ۱): پوستر رسمی فیلم/انیمه را بر اساس نام پوشه از دیتابیس‌های معتبر سینمایی و انیمه‌ای (MyAnimeList و IMDb) سرچ و دانلود کرده و روی پوشه ست می‌کند.
+<a name="persian"></a>
+## 🇮🇷 توضیحات فارسی
 
-تصویر محلی (اولویت ۲): در صورت قطعی اینترنت یا وجود تصویر، عکس موجود داخل پوشه را جایگزین می‌کند.
+یک ابزار هوشمند و خودکار برای فایل‌منیجر **Nemo** (لینوکس مینت) که به شما در مرتب‌سازی آرشیو فیلم، سریال و انیمه کمک می‌کند. تنها با یک راست‌کلیک، نام فایل یا پوشه استاندارد شده و پوستر رسمی آن ست می‌شود.
 
-استخراج کاور از ویدیو (اولویت ۳): در صورت عدم وجود عکس، با ابزار ffmpeg از ویدیوی داخل پوشه یک فریم استخراج کرده و به عنوان آیکون ست می‌کند.
+### 🔄 نحوه عملکرد اسکریپت
+1. **اصلاح و تمیزکاری نام:** تبدیل نقطه‌ها (`.`) و آندرلاین‌ها (`_`) به فاصله و حذف عبارات اضافه کیفیت (مانند `1080p`, `BluRay`, `x264`, `WEB-DL`, `YIFY`).
+2. **دانلود آنلاین پوستر (اولویت ۱):** 
+   - **انیمه‌ها:** جستجو در دیتابیس **MyAnimeList**.
+   - **فیلم و سریال‌ها:** جستجوی مستقیم در دیتابیس **IMDb**.
+3. **تصویر محلی (اولویت ۲):** در صورت قطع اینترنت یا پیدا نشدن پوستر، از عکس موجود درون پوشه استفاده می‌کند.
+4. **استخراج فریم از ویدیو (اولویت ۳):** در صورت عدم وجود عکس، با ابزار `ffmpeg` یک فریم از ویدیوی درون پوشه استخراج کرده و به عنوان کاور ست می‌کند.
 
-🌟 ویژگی‌ها
-دانلود هوشمند پوستر: متصل به API دیتابیس MyAnimeList (Jikan) برای انیمه‌ها و سرچ مستقیم IMDb برای فیلم و سریال‌ها.
+### 🌟 ویژگی‌ها
+- **اتصال به دو منبع معتبر:** دریافت پوستر دقیق از **MyAnimeList** و **IMDb**.
+- **پشتیبانی از تک فایل ویدیویی:** اگر روی یک فایل فیلم راست‌کلیک کنید، اسکریپت خودکار یک پوشه تمیز هم‌نام فیلم می‌سازد، فیلم را داخل آن قرار داده و پوستر را روی پوشه جدید تنظیم می‌کند.
+- **بدون نیاز به API Key:** نصب و استفاده بسیار سریع و آسان بدون تنظیمات پیچیده.
 
-استخراج کاور از ویدیو (Backup): ساخت خودکار عکس از فایل‌های MKV, MP4 و... در حالت آفلاین.
-
-پاک‌سازی هوشمند نام: حذف عباراتی مثل 1080p, BluRay, x264, WEB-DL و... موقع سرچ پوستر.
-
-📋 نیازمندی‌ها
-برای استخراج عکس و دانلود از API، ابزارهای زیر مورد نیاز هستند:
-
-Bash
+### 📋 نیازمندی‌ها
+پیش از نصب، از نصب بودن پیش‌نیازهای زیر در لینوکس خود مطمئن شوید:
+```bash
 sudo apt update && sudo apt install ffmpeg curl python3 -y
-🚀 نحوه نصب سریع
-کافی است ترمینال را باز کرده و دستور زیر را اجرا کنید (نام کاربری خود در گیت‌هاب را جایگزین YOUR_USERNAME کنید):
+```
 
-Bash
-curl -sSL [https://raw.githubusercontent.com/YOUR_USERNAME/nemo-smart-poster/main/install.sh](https://raw.githubusercontent.com/YOUR_USERNAME/nemo-smart-poster/main/install.sh) | bash
-📜 License
-This project is licensed under the MIT License.
+### 🚀 نحوه نصب سریع
+کافی است دستور زیر را در ترمینال کپی و اجرا کنید:
+```bash
+curl -sSL https://raw.githubusercontent.com/Homayooni/nemo-smart-poster/main/install.sh | bash
+```
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
