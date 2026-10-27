@@ -12,7 +12,7 @@ A lightweight **Nemo Action** script designed for **Linux Mint (Cinnamon desktop
 
 ### Quick Install (Recommended)
 Run this single command in your terminal to install automatically:
-```markdown
+
   ```bash
 curl -sSL [https://raw.githubusercontent.com/Homayooni/nemo-smart-poster/main/install.sh](https://raw.githubusercontent.com/Homayooni/nemo-smart-poster/main/install.sh) | bash
 ```
