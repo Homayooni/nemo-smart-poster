@@ -8,25 +8,31 @@ A lightweight **Nemo Action** script designed for **Linux Mint (Cinnamon desktop
 - Easily generates visual previews/covers for your folders.
 - Lightweight and fast execution.
 
+# Nemo Smart Poster 🖼️
+
+A lightweight **Nemo Action** script designed for **Linux Mint (Cinnamon desktop environment)** that allows users to quickly generate smart folder preview posters and custom thumbnail icons directly from the context menu.
+
+## Features
+- Integrates seamlessly into the **Nemo File Manager** right-click context menu.
+- Easily generates visual previews/covers for your folders.
+- Lightweight and fast execution.
+
+# Nemo Smart Poster 🖼️
+
+A lightweight **Nemo Action** script designed for **Linux Mint (Cinnamon desktop environment)** that allows users to quickly generate smart folder preview posters and custom thumbnail icons directly from the context menu.
+
+## Features
+- Integrates seamlessly into the **Nemo File Manager** right-click context menu.
+- Easily generates visual previews/covers for your folders.
+- Lightweight and fast execution.
+
 ## Installation
 
-1. Clone this repository:
-   ```bash
-   git clone [https://github.com/Homayooni/nemo-smart-poster.git](https://github.com/Homayooni/nemo-smart-poster.git)
+### Quick Install (Recommended)
+Run this single command in your terminal to install automatically:
 
-```
-
-2. Copy the action script to your local Nemo actions directory:
 ```bash
-mkdir -p ~/.local/share/nemo/actions/
-cp nemo-smart-poster.nemo_action ~/.local/share/nemo/actions/
-
-```
-
-
-3. Restart Nemo file manager:
-```bash
-nemo -q
+curl -sSL [https://raw.githubusercontent.com/Homayooni/nemo-smart-poster/main/install.sh](https://raw.githubusercontent.com/Homayooni/nemo-smart-poster/main/install.sh) | bash
 
 ```
 
